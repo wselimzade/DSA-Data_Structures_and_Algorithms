@@ -1,3 +1,9 @@
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+
 var removeElement = function(nums, val) 
 {
     const newNums = new Array
