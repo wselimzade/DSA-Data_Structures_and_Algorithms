@@ -2,7 +2,7 @@ class Solution {
     public:
         int mySqrt(int x) 
         {
-            long int sqrt = 1;
+            long int sqrt = 0;
 
             for (long int i = 0; i <= x; ++i)
             {
