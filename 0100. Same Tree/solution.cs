@@ -19,13 +19,19 @@ public class Solution
         if (p != null && q != null)
         {
             if (p.val != q.val)
+            {
                 same = false;
+                return;
+            }
 
             WalkTree(p.left, q.left, ref same);
             WalkTree(p.right, q.right, ref same);
         }
         else if (p != null && q == null || p == null && q != null)
+        {
             same = false;
+            return;
+        }
     }
 
     public bool IsSameTree(TreeNode p, TreeNode q)

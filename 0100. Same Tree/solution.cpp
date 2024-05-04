@@ -18,13 +18,19 @@ public:
         if (p && q) 
         {
             if (p->val != q->val)
+            {
                 same = false;
+                return;
+            }
 
             walkTree(p->right, q->right, same);
             walkTree(p->left, q->left, same);
         }
         else if (p && q == nullptr || q && p == nullptr)
+        {
             same = false;
+            return;
+        }
     }
     
     bool isSameTree(TreeNode* p, TreeNode* q) {

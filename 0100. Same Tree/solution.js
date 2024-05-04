@@ -19,13 +19,19 @@ var walkTree = function(p, q, same)
     if (p && q)
     {
         if (p.val != q.val)
+        {
             same.value = false
+            return
+        }
 
         walkTree(p.left, q.left, same)
         walkTree(p.right, q.right, same)
     }
     else if ((p && q == null) || (p == null && q))
-        same.value = false;
+    {
+        same.value = false
+        return
+    }
 }
 
 /**
@@ -35,7 +41,7 @@ var walkTree = function(p, q, same)
  */
 
 var isSameTree = function(p, q) {
-    const same = { value: true };
+    const same = { value: true }
     walkTree(p, q, same)
-    return same.value;
+    return same.value
 };
