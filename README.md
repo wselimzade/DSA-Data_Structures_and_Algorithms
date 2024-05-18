@@ -1,2 +1,1 @@
-# leetcode
-algorithms
+# DSA - Data Structures and Algorithms
